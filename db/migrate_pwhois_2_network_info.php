@@ -127,8 +127,9 @@ if($result->execute()){
 	print "Record $counter/$recordnum: $netid | $netcidr | $netcountry | $nethandle | $netname | $netorg | $netorgname | $netregister | $netupdate | $source |\n";
         // letz insert record into network_info
 	$psquery = "insert into block (inetnum,netname,country,description,maintained_by,created,last_modified,source) VALUES ('{$netcidr}','{$netname}','{$netcountry}','{$netorg}','{$nethandle}','{$netregister}','{$netupdate}','{$source}')";
-	print $psquery."\n";
-
+	if ($debug){
+	    print $psquery."\n";
+	}
 	// prepare statement
 	$psresult = $psconn->prepare($psquery);
 
