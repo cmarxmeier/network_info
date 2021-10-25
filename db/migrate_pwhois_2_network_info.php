@@ -110,7 +110,10 @@ if($result->execute()){
                             //           'lacnic'   => 6,
                             //           'twnic'    => 7,
                             //           'krnic'    => 8,
-                            //           'brnic'    => 9
+                            //           'brnic'    => 9,
+                            //           'cnnic'    => 10,
+                            //           'aunic'    => 11
+
                                 if ($netsourcecode == 1) $source='arin';
                                 if ($netsourcecode == 2) $source='ripe';
                                 if ($netsourcecode == 3) $source='apnic';
@@ -120,6 +123,9 @@ if($result->execute()){
                                 if ($netsourcecode == 7) $source='twnic';
                                 if ($netsourcecode == 8) $source='krnic';
 				if ($netsourcecode == 9) $source='brnic';
+	    			if ($netsourcecode == 10) $source='cnnic';
+                                if ($netsourcecode == 11( $source='aunic';
+							 
 				if ($source == '') $source='ripe';
 				if ($netregister == '') $netregister='1970-01-01';
 				if ($netupdate == '') $netupdate='1970-01-01';
