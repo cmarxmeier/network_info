@@ -54,6 +54,7 @@ if ($psconn){
 // so letz import records from pwhois database - data with muiltiple cidrs per dataset will throw error
 // 
 $query = "SELECT count(*) as num from netblock where isipv4=1";
+// $query = "SELECT count(*) as num from netblock where source=1 and isipv6=1";
 
 if ($debug){
         print "$query\n";
@@ -80,7 +81,7 @@ while ($counter < $maxnum ){
 
 //$query  = "SELECT netHandle, netname, country, netcidr, org_id, orgname, registerdate, updatedate, source FROM netblock LIMIT 0,10";
 $query  = "SELECT id,netHandle, netname, country, netcidr, org_id, orgname, registerdate, updatedate, source FROM netblock where isipv4=1 LIMIT {$offset},10000";
- 
+// query  = "SELECT id,netHandle, netname, country, netcidr, org_id, orgname, registerdate, updatedate, source FROM netblock where source=1 and isipv6=1 LIMIT {$offset},10000";
 if ($debug){
 	print "$query\n";
 }
