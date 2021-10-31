@@ -125,7 +125,7 @@ if($result->execute()){
                                 if ($netsourcecode == 8) $source='krnic';
 				if ($netsourcecode == 9) $source='brnic';
 	    			if ($netsourcecode == 10) $source='cnnic';
-                                if ($netsourcecode == 11( $source='aunic';
+                                if ($netsourcecode == 11) $source='aunic';
 				// fill up empty values with defaults			 
 				if ($source == '') $source='ripe';
 				if ($netregister == '') $netregister='1970-01-01';
